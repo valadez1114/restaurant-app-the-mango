@@ -1038,3 +1038,42 @@ nav a:hover::after {
         font-size: 14px;
     }
 }
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column !important;
+        align-items: center !important;
+        height: auto !important;
+        padding: 15px !important;
+    }
+
+    .logo {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+
+    .logo img {
+        width: 90px !important;
+        height: 90px !important;
+        margin: 0 0 10px 0 !important;
+    }
+
+    .logo span {
+        font-size: 32px !important;
+    }
+
+    .navbar nav {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 10px !important;
+    }
+
+    .navbar nav a {
+        display: block !important;
+        width: 90% !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+        font-size: 18px !important;
+        padding: 12px !important;
+    }
+}
