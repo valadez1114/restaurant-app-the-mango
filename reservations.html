@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reservations</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="navbar">
+    <div class="logo">
+        <img src="Images/The Mango Logo.png" alt="The Mango Logo">
+        <span>The Mango</span>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a class="active" href="menu.html">Menu</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="reservations.html">Reservations</a>
+    </nav>
+</header>
+<section class="page-header reservation-header">
+    <h1>Reservations</h1>
+    <p>Fresh coastal Mexican cuisine inspired by Tecomán, Colima.</p>
+</section>
+<main class="reservation-page">
+    <section class="reservation-section">
+        <h1>Make a Reservation</h1>
+        <p>Reserve your table at The Mango.</p>
+
+        <form class="reservation-form" action="https://formspree.io/f/xykqeyyg" method="POST">
+            <label>
+                Full Name
+                <input type="text" name="name" required>
+            </label>
+
+            <label>
+                Email
+                <input type="email" name="_replyto" required>
+            </label>
+
+            <label>
+                Phone Number
+                <input type="tel" name="phone" required>
+            </label>
+
+            <label>
+                Date
+                <input type="date" name="date" required>
+            </label>
+
+            <label>
+                Time
+                <input type="time" name="time" required>
+            </label>
+
+            <label>
+                Number of Guests
+                <input type="number" name="guests" min="1" max="20" required>
+            </label>
+
+            <label>
+                Special Requests
+                <textarea name="message" rows="4"></textarea>
+            </label>
+
+            <button type="submit">Submit Reservation</button>
+        </form>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <p class="copyright">
+        © 2026 Mango Restaurant • Fresh coastal Mexican cuisine • Tecomán, Colima
+    </p>
+
+</footer>
+</body>
+</html>

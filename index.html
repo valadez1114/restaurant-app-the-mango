@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mango Restaurant</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        <img src="Images/The Mango Logo.png" alt="The Mango Logo">
+        <span>The Mango</span>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="reservations.html">Reservations</a>
+    </nav>
+</header>
+
+<section class="hero">
+
+    <div class="slide active"
+         style="background-image:url('Images/Mango Cheveche.png')">
+    </div>
+
+    <div class="slide"
+         style="background-image:url('Images/Mango Restaurant Image.png')">
+    </div>
+
+    <div class="slide"
+         style="background-image:url('Images/Mango Drink Image.png')">
+    </div>
+
+    <div class="hero-overlay">
+        <h1>Welcome to The Mango</h1>
+        <h2>Fresh Coastal Mexican Cuisine</h2>
+
+        <p>
+            Fresh ingredients, traditional recipes,
+            and unforgettable dining experiences.
+        </p>
+
+        <a href="reservations.html" class="btn">Make Reservation</a>
+        <a href="menu.html" class="btn secondary">View Menu</a>
+    </div>
+
+    <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+</section>
+<div class="section-divider"></div>
+
+<section class="featured-section">
+    <h2 class="featured-title">Featured Dishes</h2>
+
+    <div class="dish-grid">
+        <div class="dish-card">
+            <img src="Images/Agua Chile.png" alt="Aguachile Verde">
+            <h3>Agua Chile</h3>
+        </div>
+
+        <div class="dish-card">
+            <img src="Images/tacos image.png" alt="Tacos">
+            <h3>Tacos</h3>
+        </div>
+
+        <div class="dish-card">
+            <img src="Images/Shrimp Skewers Image.png" alt="Shrimp Skewers">
+            <h3>Shrimp Skewers</h3>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+
+<section class="info-section">
+
+    <div class="info-box">
+
+        <h2>About The Mango</h2>
+
+        <p>
+            The Mango is a coastal Mexican restaurant inspired by the tropical
+            atmosphere of Tecomán, Colima. Surrounded by mature mango trees,
+            the restaurant offers fresh seafood, traditional Mexican cuisine,
+            handcrafted cocktails, and an unforgettable outdoor dining experience.
+        </p>
+    </div>
+
+    <div class="info-box">
+        <h2>Hours & Location</h2>
+
+        <p><strong>Monday - Thursday</strong><br>
+            11:00 AM - 9:00 PM</p>
+
+        <p><strong>Friday - Sunday</strong><br>
+            11:00 AM - 10:00 PM</p>
+
+        <p>
+            546 Aquiles Serdán<br>
+            Tecomán, Colima
+        </p>
+
+        <p>
+            +52 (313) 555-1234
+        </p>
+    </div>
+
+</section>
+<script>
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+
+    let current = 0;
+
+    setInterval(() => {
+
+        slides[current].classList.remove('active');
+        dots[current].classList.remove('active');
+
+        current++;
+
+        if(current >= slides.length){
+            current = 0;
+        }
+
+        slides[current].classList.add('active');
+        dots[current].classList.add('active');
+
+    }, 8000);
+</script>
+<footer class="site-footer">
+    <p class="copyright">
+        © 2026 Mango Restaurant • Fresh coastal Mexican cuisine • Tecomán, Colima
+    </p>
+
+</footer>
+</body>
+
+</html>

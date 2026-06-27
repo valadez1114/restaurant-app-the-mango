@@ -1,0 +1,851 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f7f3e9;
+    color: #2b2b2b;
+}
+
+/* NAVBAR */
+.navbar {
+    height: 150px;
+    background: #355e4b;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 150px;
+    height: 150px;
+    margin-right: 40px;
+}
+
+.logo span {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+}
+
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+nav a:hover {
+    border-color: #ff6a00;
+    color: #ff6a00;
+    transform: translateY(-4px);
+}
+
+/* HERO CAROUSEL */
+.hero {
+    position: relative;
+    height: 650px;
+    overflow: hidden;
+    color: white;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.slide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.hero-overlay {
+    position: relative;
+    z-index: 10;
+
+    padding-left: 100px;
+    padding-top: 250px;
+    max-width: 700px;
+
+}
+
+.hero-overlay h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-overlay h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.hero-overlay p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 28px;
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    background: #ff6a00;
+    color: white;
+    padding: 14px 26px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.btn.secondary {
+    background: #355e4b;
+}
+
+/* DOTS */
+.dots {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+    z-index: 20;
+}
+
+.dot {
+    height: 13px;
+    width: 13px;
+    background: white;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 6px;
+    opacity: 0.8;
+}
+
+.dot.active {
+    background: #ff6a00;
+    opacity: 1;
+}
+
+/* INFO SECTION */
+.info-section {
+    display: flex;
+    gap: 50px;
+    padding: 80px;
+    background-color: white;
+}
+
+.info-box {
+    flex: 1;
+}
+
+
+
+.info-box:last-child {
+    padding-left: 40px;
+}
+
+.info-box h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: #355e4b;
+    margin-bottom: 40px;
+    padding: 10px;
+    border-bottom: 4px solid #ff6a00;
+}
+
+.info-box p {
+    font-size: 19px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .navbar {
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 18px;
+    }
+
+    .hero {
+        height: 700px;
+    }
+
+    .hero-overlay {
+        padding-left: 40px;
+        padding-top: 180px;
+    }
+
+    .hero-overlay h1 {
+        font-size: 46px;
+    }
+
+    .info-section {
+        flex-direction: column;
+        padding: 40px;
+    }
+
+    .info-box:first-child {
+        border-right: none;
+        border-bottom: 100px solid #355e4b;
+        padding-right: 0;
+        padding-bottom: 30px;
+    }
+
+    .info-box:last-child {
+        padding-left: 0;
+    }
+}
+nav a {
+    position: relative;
+}
+
+nav a:hover::after {
+    content: "🥭";
+    position: absolute;
+    top: -15px;
+    right: -8px;
+    font-size: 20px;
+}
+.section-divider {
+    width: 92%;
+    height: 2px;
+    background: linear-gradient(
+            to right,
+            #355e4b,
+            #ff6a00,
+            #355e4b
+    );
+    margin: 30px auto;
+}
+
+.featured-section {
+    background: #f7f3e9;
+    padding: 20px 80px;
+    text-align: center;
+}
+
+.featured-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: #355e4b;
+    margin-bottom: 35px;
+    text-align: center;
+
+}
+
+.dish-grid {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+}
+
+.dish-card {
+    width: 100%;
+    height: 240px;
+    transition: all 0.3s ease;
+
+}
+
+.dish-card:hover {
+    transform: translateY(-8px);
+}
+
+.dish-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.dish-card h3 {
+    margin-top: 15px;
+    font-size: 22px;
+    color: #2b2b2b;
+}
+
+/* MENU SECTION*/
+.page-header {
+    background: url("../Images/Mango Restaurant Image.png");
+    background-size: cover;
+    background-position: center 40%;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+
+
+.page-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    color: white;
+    margin-bottom: 10px;
+}
+.page-header p {
+    font-size: 20px;
+    color: white;
+    margin: 0;
+}
+
+
+
+
+.menu-section {
+    padding: 40px 90px 90px;
+}
+
+
+.menu-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    color: #355e4b;
+    position: relative;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    margin-bottom: 35px;
+}
+
+.menu-section h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background: linear-gradient(
+            to right,
+            #355e4b,
+            #ff6a00,
+            #355e4b
+    );
+}
+.menu-grid {
+    display: grid;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.menu-card {
+    display: flex;
+    gap: 20px;
+    background: white;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    transition: all 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+}
+
+.menu-card img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.menu-card h3 {
+    font-size: 22px;
+    color: #2b2b2b;
+    margin-bottom: 10px;
+}
+
+.menu-card h3 span {
+    color: #ff6a00;
+    float: right;
+    margin-left: 15px;
+}
+
+.menu-card p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.price{
+    color: #ff6a00;
+    font-size: 24px;
+    font-weight: 700;
+}
+.menu-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.menu-nav a {
+    background: #355e4b;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 800;
+    transition: all 0.3s ease;
+}
+
+.menu-nav a:hover {
+    background: #ff6a00;
+    transform: translateY(-3px);
+}
+html {
+    scroll-behavior: smooth;
+}
+/* --- gallery layout --- */
+.gallery-section { padding:3rem 1rem; border-bottom:1px solid #eee; }
+.section-title  { text-align:center; margin-bottom:1rem; font-size:1.8rem; }
+
+/* --- carousel --- */
+.carousel{
+    position: relative;
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+
+    border-radius: 15px;
+    overflow: hidden;
+
+    /* Shadow */
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.22);
+
+    transition: transform 0.3s ease,
+    box-shadow 0.3s ease;
+}.slides  { position:relative; height:0; padding-bottom:56%; } /* 16:9 ratio */
+.slide   {
+    position:absolute; inset:0;
+    width:100%; height:100%; object-fit:cover;
+    opacity:0; transition:opacity .8s ease-in-out;
+}
+.slide.active { opacity:1; }
+
+/* controls */
+.carousel .ctrl {           /* both arrows */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,165, 60, .75);   /* mango-tinted orange */
+    border: none;
+    font-size: 2rem;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1;               /* <-- put arrows above slides */
+}
+
+.carousel .prev { left: .5rem; }
+.carousel .next { right: .5rem; }
+.carousel .ctrl:hover{
+    background: rgba(255,165, 60, .95);   /* a bit stronger on hover */
+    box-shadow: 0 2px 6px rgba(0,0,0,.2);
+}.about-hero {
+    height: 280px;
+    background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+    url("../Images/The Mango Courtyard Entrance.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.about-hero-text h1 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.about-hero-text p {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.about-page {
+    background: #fffaf0;
+}
+
+.about-intro {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 70px 20px 40px;
+    text-align: center;
+}
+
+.about-intro h2,
+.why-us h2,
+.about-cta h2 {
+    color: #2e5a43;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.about-intro p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+.about-cards {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    padding: 40px 8%;
+    flex-wrap: wrap;
+}
+
+.about-card {
+    background: white;
+    width: 280px;
+    padding: 30px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+    transition: transform .3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-6px);
+}
+
+.about-card h3 {
+    color: #2e5a43;
+    margin-bottom: 15px;
+}
+
+.about-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.about-quote {
+    background: #2e5a43;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    margin-top: 40px;
+}
+
+.about-quote h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.why-us {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.why-list {
+    max-width: 700px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 15px;
+    text-align: left;
+}
+
+.why-list p {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.10);
+    color: #444;
+    transition: transform .3s ease, box-shadow .3s ease;
+
+}
+.why-list p:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,.18);
+}
+.about-cta {
+    text-align: center;
+    padding: 70px 20px;
+    background: white;
+}
+
+.about-cta p {
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.about-btn {
+    display: inline-block;
+    background: #d89b28;
+    color: white;
+    padding: 14px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background .3s ease, transform .3s ease;
+}
+
+.about-btn:hover {
+    background: #b97e18;
+    transform: translateY(-3px);
+}
+
+
+
+.gallery-header {
+    background-image: url("../Images/Mango Evening Courtyard.png");
+}
+
+.contact-hero {
+    height: 280px;
+    background:
+            linear-gradient(rgba(0,0,0,.60), rgba(0,0,0,.60)),
+            url("../Images/The Mango Gallery Hero.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-hero-text h1 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.contact-hero-text p {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.contact-page {
+    background: #fffaf0;
+    padding: 70px 8%;
+}
+
+.contact-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 320px;
+    max-width: 500px;
+}
+
+.contact-info h2 {
+    color: #2e5a43;
+    font-size: 2.3rem;
+    margin-bottom: 25px;
+}
+
+.contact-card {
+    background: white;
+    padding: 22px;
+    margin-bottom: 18px;
+    border-radius: 16px;
+    box-shadow: 0 8px 22px rgba(0,0,0,.13);
+    border-left: 5px solid #d89b28;
+}
+
+.contact-card h3 {
+    color: #2e5a43;
+    margin-bottom: 8px;
+}
+
+.contact-card p {
+    color: #444;
+    line-height: 1.6;
+}
+
+.map-box {
+    width: 700px;
+    height: 450px;
+    margin-top: 75px;
+
+    border-radius: 20px;
+    overflow: hidden;
+
+    box-shadow: 0 12px 30px rgba(0,0,0,.22);
+}
+.map-box iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+/* --- footer --- */
+/* --- footer container --- */
+/* FOOTER BASE ------------------------------------------------------------ */
+.site-footer{
+    text-align: center;
+    background: #355e4b;
+    padding: 20px 0;
+}
+
+.copyright{
+    width: fit-content;      /* makes the paragraph only as wide as the text */
+    margin: 0 auto 8px auto; /* centers it */
+    white-space: nowrap;     /* keeps it on one line */
+    font-size: 18px;
+    color: #eeeeee;
+}
+.reservation-page {
+    background: #f5f4ef;
+    min-height: calc(100vh - 170px);
+    padding: 50px 20px;
+}
+
+.reservation-section {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.12);
+}
+
+.reservation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.reservation-form label {
+    text-align: left;
+    font-weight: bold;
+}
+
+.reservation-form input,
+.reservation-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.reservation-form button {
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #d9822b;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.reservation-form button:hover {
+    background: #c96f18;
+    transform: translateY(-3px);
+}
+.reservation-header {
+    background-image: url("../Images/Reserve Your Table Image.png");
+}
+@media (max-width: 900px) {
+    .navbar {
+        height: auto;
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .logo img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .logo span {
+        font-size: 36px;
+    }
+
+    nav {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 18px;
+        padding: 8px 10px;
+    }
+
+    .reservation-hero {
+        width: 100%;
+        height: 230px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .reservation-section {
+        width: 95%;
+        padding: 25px;
+    }
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}

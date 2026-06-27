@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="navbar">
+    <div class="logo">
+        <img src="Images/The Mango Logo.png" alt="The Mango Logo">
+        <span>The Mango</span>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a class="active" href="menu.html">Menu</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="reservations.html">Reservations</a>
+    </nav>
+</header>
+<section class="page-header gallery-header">
+    <h1>Our Gallery</h1>
+    <p>Fresh coastal Mexican cuisine inspired by Tecomán, Colima.</p>
+</section>
+
+<main class="gallery-page">
+    <!-- ───────────── SECTION 1 : RESTAURANT ───────────── -->
+    <section id="restaurant" class="gallery-section">
+        <h2 class="section-title">Our Restaurant</h2>
+
+        <div class="carousel" data-carousel="restaurant">
+            <button class="ctrl prev" aria-label="Previous slide">‹</button>
+
+            <div class="slides">
+                <img class="slide" src="Images/The Mango Courtyard Entrance.png"   alt="Courtyard entrance" />
+                <img class="slide" src="Images/The Mango Logo (1600 by 900).png"   alt="Indoor dining room" />
+                <img class="slide" src="Images/Mango Restaurant Image.png"         alt="Patio tables" />
+            </div>
+
+            <button class="ctrl next" aria-label="Next slide">›</button>
+        </div>
+    </section>
+
+    <!-- ───────────── SECTION 2 : FEATURED FOOD ───────────── -->
+    <section id="food" class="gallery-section">
+        <h2 class="section-title">Our Dishes</h2>
+
+        <div class="carousel" data-carousel="food">
+            <button class="ctrl prev">‹</button>
+            <div class="slides">
+                <img class="slide" src="Images/La Tabla del Mango.png" alt="La Tabla del Mango" />
+                <img class="slide" src="Images/Chicken Tacos.png"      alt="Chicken tacos" />
+                <img class="slide" src="Images/Traditional Flan.png"   alt="Traditional flan" />
+            </div>
+            <button class="ctrl next">›</button>
+        </div>
+    </section>
+
+    <!-- ───────────── SECTION 3 : SIGNATURE DRINKS ───────────── -->
+    <section id="drinks" class="gallery-section">
+        <h2 class="section-title">Our Drinks</h2>
+
+        <div class="carousel" data-carousel="drinks">
+            <button class="ctrl prev">‹</button>
+            <div class="slides">
+                <img class="slide" src="Images/Mango Margarita.png"      alt="Mango margarita" />
+                <img class="slide" src="Images/Agua de Jamaica.png"      alt="Agua de Jamaica" />
+                <img class="slide" src="Images/Strawberry Lemonade.png"  alt="Strawberry lemonade" />
+            </div>
+            <button class="ctrl next">›</button>
+        </div>
+    </section>
+</main>
+
+
+<footer class="site-footer">
+    <p class="copyright">
+        © 2026 Mango Restaurant • Fresh coastal Mexican cuisine • Tecomán, Colima
+    </p>
+
+</footer>
+<script src="js/script.js"></script>
+
+
+</body>
+</html>
